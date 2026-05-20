@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Бренды корейской косметики в KOREVA — Beauty of Joseon, COSRX, Anua, Laneige, SKIN1004 и другие. Оригинал с доставкой по Казахстану.">
+<title>Бренды — KOREVA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --c-white:#ffffff;--c-snow:#fdfcfb;--c-milk:#faf7f4;--c-cream:#f4ede4;
+  --c-blush:#f8eded;--c-petal:#f0dada;--c-rose:#e8c4c4;
+  --c-copper:#c47b6e;--c-sienna:#b5614f;--c-bark:#3d2520;--c-espresso:#261812;
+  --c-text:#1e1412;--c-mid:#7a5c54;--c-light:#b09490;--c-muted:#cdbbb8;
+  --accent:var(--c-copper);--accent-dark:var(--c-sienna);
+  --glass:rgba(255,255,255,.75);
+  --sh-xs:0 2px 8px rgba(38,24,18,.06);--sh-sm:0 4px 16px rgba(38,24,18,.08);
+  --sh-md:0 8px 32px rgba(38,24,18,.10);--sh-lg:0 16px 56px rgba(38,24,18,.13);
+  --sh-xl:0 28px 80px rgba(38,24,18,.16);
+  --r-sm:10px;--r-md:16px;--r-lg:24px;--r-xl:32px;--r-pill:50px;
+  --t-fast:all .2s cubic-bezier(.4,0,.2,1);--t-base:all .35s cubic-bezier(.4,0,.2,1);
+  --f-serif:'Cormorant Garamond',Georgia,serif;--f-sans:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--f-sans);background:var(--c-snow);color:var(--c-text);overflow-x:hidden;line-height:1.6}
+::selection{background:var(--c-petal);color:var(--c-bark)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--c-milk)}::-webkit-scrollbar-thumb{background:var(--c-rose);border-radius:5px}
+img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{font-family:var(--f-sans)}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto;z-index:800;transition:var(--t-base)}
+.hd-inner{max-width:1400px;margin:0 auto;padding:22px 48px;display:flex;align-items:center;gap:32px;transition:var(--t-base)}
+header.scrolled .hd-inner{padding:13px 48px;background:var(--glass);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid rgba(255,255,255,.7);box-shadow:0 4px 24px rgba(38,24,18,.07)}
+.logo{font-family:var(--f-serif);font-size:1.55rem;font-weight:300;letter-spacing:.32em;color:var(--c-text);display:flex;align-items:center;gap:6px;flex-shrink:0;transition:var(--t-fast)}.logo:hover{color:var(--accent)}.logo em{font-style:normal;color:var(--accent)}
+.logo-gem{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:gemBeat 2.8s ease-in-out infinite}
+@keyframes gemBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.5);opacity:.5}}
+nav{flex:1;display:flex;justify-content:center;gap:2px}
+nav a{font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--c-mid);padding:8px 16px;border-radius:var(--r-pill);transition:var(--t-fast);white-space:nowrap}
+nav a:hover,nav a.active{background:var(--c-cream);color:var(--c-text)}
+.hd-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.hd-btn{width:40px;height:40px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--t-fast);position:relative;color:var(--c-mid)}.hd-btn:hover{background:var(--c-cream);color:var(--c-text)}.hd-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6}
+.cart-badge{position:absolute;top:2px;right:2px;min-width:16px;height:16px;background:var(--accent);color:#fff;font-size:.58rem;font-weight:700;border-radius:10px;padding:0 4px;display:none;align-items:center;justify-content:center;border:2px solid var(--c-snow)}.cart-badge.show{display:flex}
+.hd-wa{display:flex;align-items:center;gap:6px;padding:9px 18px;border-radius:var(--r-pill);background:linear-gradient(135deg,#25D366,#1aad57);color:#fff;border:none;cursor:pointer;font-size:.78rem;font-weight:600;transition:var(--t-fast);white-space:nowrap}.hd-wa:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(37,211,102,.3)}.hd-wa svg{width:15px;height:15px;fill:#fff}
+.burger{display:none;flex-direction:column;gap:5px;width:40px;height:40px;border:none;background:transparent;cursor:pointer;border-radius:var(--r-sm);align-items:center;justify-content:center}.burger span{display:block;width:22px;height:1.5px;background:var(--c-text);border-radius:2px;transition:var(--t-base)}
+.mob-menu{position:fixed;inset:0;z-index:790;background:var(--c-snow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .38s ease}.mob-menu.open{opacity:1;pointer-events:all}
+.mob-menu a{font-family:var(--f-serif);font-size:clamp(1.8rem,7vw,2.6rem);font-weight:300;letter-spacing:.12em;color:var(--c-text);padding:10px 32px;border-radius:var(--r-md);transition:var(--t-fast)}.mob-menu a:hover{color:var(--accent)}
+.mob-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;border:none;background:var(--c-cream);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--c-text);transition:var(--t-fast)}.mob-close:hover{background:var(--c-petal);transform:rotate(90deg)}
+.srch-overlay{position:fixed;inset:0;z-index:850;background:rgba(250,247,244,.96);backdrop-filter:blur(24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;opacity:0;pointer-events:none;transition:opacity .3s ease}.srch-overlay.open{opacity:1;pointer-events:all}
+.srch-wrap{display:flex;align-items:center;gap:14px;width:min(580px,88vw);background:var(--c-white);border-radius:var(--r-pill);padding:14px 22px;box-shadow:var(--sh-lg);border:1.5px solid var(--c-rose)}.srch-wrap svg{width:18px;height:18px;stroke:var(--c-light);flex-shrink:0;fill:none;stroke-width:1.6}.srch-wrap input{flex:1;border:none;outline:none;font-size:1rem;font-family:var(--f-sans);color:var(--c-text);background:transparent}.srch-wrap input::placeholder{color:var(--c-muted)}
+.srch-hint{font-size:.78rem;color:var(--c-light)}.srch-close{position:absolute;top:24px;right:24px;width:42px;height:42px;border-radius:50%;border:none;background:var(--c-cream);cursor:pointer;font-size:1rem;color:var(--c-text);transition:var(--t-fast)}.srch-close:hover{transform:rotate(90deg);background:var(--c-petal)}
+
+/* HERO */
+.brands-hero{padding:clamp(110px,13vw,150px) clamp(20px,4vw,48px) clamp(50px,6vw,80px);background:linear-gradient(145deg,var(--c-milk),var(--c-blush) 55%,var(--c-cream));position:relative;overflow:hidden;text-align:center}
+.brands-hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:100vw;height:100vw;border-radius:50%;background:radial-gradient(circle,rgba(248,196,196,.3),transparent 65%);pointer-events:none;filter:blur(50px)}
+.brands-hero-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.76rem;color:var(--c-light);margin-bottom:20px}.breadcrumb a{color:var(--c-light);transition:var(--t-fast)}.breadcrumb a:hover{color:var(--accent)}.breadcrumb span{color:var(--c-muted)}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}.sec-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--accent);border-radius:2px}
+.brands-hero h1{font-family:var(--f-serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;color:var(--c-text);line-height:1.12;letter-spacing:-.01em;margin-bottom:16px}
+.brands-hero h1 em{font-style:italic;color:var(--accent)}
+.brands-hero p{font-size:.95rem;color:var(--c-mid);line-height:1.75;max-width:480px;margin:0 auto}
+
+/* BRAND ALPHABET FILTER */
+.brand-filter-bar{background:var(--c-white);border-bottom:1px solid var(--c-cream);position:sticky;top:70px;z-index:50;padding:0 clamp(20px,4vw,48px)}
+.brand-filter-inner{max-width:1380px;margin:0 auto;display:flex;align-items:center;gap:4px;padding:14px 0;overflow-x:auto;scrollbar-width:none}
+.brand-filter-inner::-webkit-scrollbar{display:none}
+.af{padding:7px 14px;border-radius:var(--r-pill);border:1.5px solid transparent;background:transparent;font-size:.78rem;font-weight:600;color:var(--c-mid);cursor:pointer;transition:var(--t-fast);white-space:nowrap;font-family:var(--f-sans)}
+.af:hover{background:var(--c-cream);color:var(--c-text)}.af.on{background:var(--c-text);color:#fff}
+
+/* FEATURED BRANDS */
+.section{padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px)}
+.wrap{max-width:1380px;margin:0 auto}
+
+.featured-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+.brand-featured{border-radius:var(--r-xl);overflow:hidden;position:relative;cursor:pointer;background:var(--c-cream);min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;transition:var(--t-base)}
+.brand-featured:hover{transform:translateY(-5px);box-shadow:var(--sh-xl)}
+.bf-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.brand-featured:hover .bf-bg{transform:scale(1.04)}
+.bf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(38,24,18,.82) 0%,rgba(38,24,18,.2) 50%,transparent 100%)}
+.bf-content{position:relative;z-index:2;padding:32px}
+.bf-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:var(--r-pill);padding:5px 14px;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:12px}
+.bf-name{font-family:var(--f-serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;margin-bottom:8px;letter-spacing:-.01em}
+.bf-desc{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:20px;max-width:400px}
+.bf-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--r-pill);background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1.5px solid rgba(255,255,255,.35);color:#fff;font-size:.8rem;font-weight:500;cursor:pointer;transition:var(--t-fast)}
+.bf-btn:hover{background:rgba(255,255,255,.28)}
+.bf-btn svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:1.8}
+.bf-badge{position:absolute;top:20px;right:20px;background:var(--accent);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:var(--r-pill)}
+
+/* ALL BRANDS GRID */
+.brands-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.brand-card{background:var(--c-white);border-radius:var(--r-xl);padding:28px 24px;text-align:center;border:1.5px solid var(--c-cream);transition:var(--t-base);cursor:pointer;position:relative;overflow:hidden}
+.brand-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--c-blush),var(--c-cream));opacity:0;transition:var(--t-base)}
+.brand-card:hover{transform:translateY(-6px);border-color:var(--c-rose);box-shadow:var(--sh-lg)}.brand-card:hover::before{opacity:1}
+.bc-logo{width:80px;height:80px;border-radius:var(--r-xl);overflow:hidden;margin:0 auto 16px;background:var(--c-milk);display:flex;align-items:center;justify-content:center;position:relative;z-index:1;transition:var(--t-base);border:1px solid var(--c-cream)}
+.brand-card:hover .bc-logo{box-shadow:0 8px 24px rgba(196,123,110,.2);border-color:var(--c-rose)}
+.bc-logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+.bc-logo-text{font-family:var(--f-serif);font-size:1.1rem;font-weight:600;color:var(--accent);text-align:center}
+.bc-name{font-family:var(--f-serif);font-size:1.1rem;font-weight:500;color:var(--c-text);margin-bottom:6px;position:relative;z-index:1}
+.bc-origin{font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;position:relative;z-index:1}
+.bc-desc{font-size:.78rem;color:var(--c-mid);line-height:1.6;margin-bottom:14px;position:relative;z-index:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bc-count{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;color:var(--c-text);background:var(--c-cream);padding:4px 12px;border-radius:var(--r-pill);position:relative;z-index:1;transition:var(--t-fast)}
+.brand-card:hover .bc-count{background:var(--accent);color:#fff}
+
+/* BRAND STORY BANNER */
+.brand-banner{border-radius:var(--r-xl);background:var(--c-espresso);padding:clamp(40px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:56px;position:relative;overflow:hidden}
+.bb-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.bb-orb-1{width:400px;height:400px;background:radial-gradient(circle,rgba(196,123,110,.15),transparent);top:-100px;right:-60px}
+.bb-orb-2{width:300px;height:300px;background:radial-gradient(circle,rgba(196,123,110,.1),transparent);bottom:-80px;left:-40px}
+.bb-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c-rose);margin-bottom:14px;display:flex;align-items:center;gap:10px}.bb-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--c-rose);border-radius:2px}
+.bb-title{font-family:var(--f-serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:#fff;line-height:1.2;margin-bottom:16px}
+.bb-title em{font-style:italic;color:var(--c-rose)}
+.bb-text{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:28px}
+.bb-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--r-pill);background:var(--accent);color:#fff;border:none;font-size:.85rem;font-weight:500;cursor:pointer;transition:var(--t-fast)}.bb-btn:hover{background:var(--accent-dark);box-shadow:0 8px 28px rgba(196,123,110,.3)}
+.bb-btn svg{width:15px;height:15px;fill:#fff}
+.bb-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;position:relative;z-index:1}
+.bb-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-lg);padding:22px;transition:var(--t-base)}.bb-stat:hover{background:rgba(255,255,255,.09);border-color:rgba(196,123,110,.25)}
+.bb-stat-num{font-family:var(--f-serif);font-size:2rem;font-weight:500;color:#fff;display:block;margin-bottom:4px}
+.bb-stat-lbl{font-size:.75rem;color:rgba(255,255,255,.4)}
+
+/* FOOTER */
+footer{background:var(--c-espresso);color:rgba(255,255,255,.6);padding:72px clamp(20px,4vw,48px) 28px}
+.ft-inner{max-width:1380px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px}
+.ft-logo{font-family:var(--f-serif);font-size:1.7rem;font-weight:300;color:var(--c-white);letter-spacing:.28em;margin-bottom:14px}.ft-logo em{font-style:normal;color:var(--accent)}
+.ft-desc{font-size:.82rem;line-height:1.75;color:rgba(255,255,255,.4);margin-bottom:22px}
+.ft-contact a{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.55);font-size:.82rem;margin-bottom:9px;transition:var(--t-fast)}.ft-contact a:hover{color:var(--accent)}.ft-contact svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0}
+.ft-col h4{font-size:.78rem;font-weight:600;color:var(--c-white);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+.ft-col ul{list-style:none}.ft-col ul li{margin-bottom:9px}.ft-col ul li a{font-size:.82rem;color:rgba(255,255,255,.45);transition:var(--t-fast)}.ft-col ul li a:hover{color:var(--accent)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.ft-copy{font-size:.75rem;color:rgba(255,255,255,.25)}
+.ft-socials{display:flex;gap:10px}.ft-sc{width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.07);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--t-fast)}.ft-sc:hover{background:var(--accent);transform:translateY(-2px)}.ft-sc svg{width:14px;height:14px;fill:none;stroke:rgba(255,255,255,.6);stroke-width:1.8}.ft-sc:hover svg{stroke:#fff}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}.reveal.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:1100px){.brands-grid{grid-template-columns:repeat(3,1fr)}.featured-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.brands-grid{grid-template-columns:repeat(2,1fr)}.brand-banner{grid-template-columns:1fr}.hd-inner{padding:16px 24px}header.scrolled .hd-inner{padding:12px 24px}nav{display:none}.hd-wa{display:none}.burger{display:flex}.ft-top{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:500px){.brands-grid{grid-template-columns:1fr}.ft-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="hd-inner">
+    <a href="index.html" class="logo">KO<em>RE</em>VA<span class="logo-gem"></span></a>
+    <nav>
+      <a href="index.html">Главная</a><a href="catalog.html">Каталог</a>
+      <a href="brands.html" class="active">Бренды</a>
+      <a href="delivery.html">Доставка</a><a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="hd-actions">
+      <button class="hd-btn" onclick="openSearch()"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <button class="hd-btn" onclick="openCart()"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge" id="cartBadge">0</span></button>
+      <a href="https://wa.me/77001234567" class="hd-wa" target="_blank"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>WhatsApp</a>
+      <button class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mob-menu" id="mobMenu"><button class="mob-close" onclick="toggleMenu()">✕</button><a href="index.html" onclick="toggleMenu()">Главная</a><a href="catalog.html" onclick="toggleMenu()">Каталог</a><a href="brands.html" onclick="toggleMenu()">Бренды</a><a href="delivery.html" onclick="toggleMenu()">Доставка</a><a href="contacts.html" onclick="toggleMenu()">Контакты</a></div>
+<div class="srch-overlay" id="srchOverlay"><button class="srch-close" onclick="closeSearch()">✕</button><div class="srch-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" id="srchInput" placeholder="Поиск бренда..."></div><div class="srch-hint">Escape — закрыть</div></div>
+
+<!-- HERO -->
+<div class="brands-hero">
+  <div class="brands-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span>›</span><span style="color:var(--c-text)">Бренды</span></div>
+    <div class="sec-eyebrow">Наши партнёры</div>
+    <h1>40+ корейских <em>брендов</em><br>в одном месте</h1>
+    <p>Работаем напрямую с ведущими производителями K-beauty. Только оригинальная продукция с официальными сертификатами.</p>
+  </div>
+</div>
+
+<!-- ALPHABET FILTER -->
+<div class="brand-filter-bar">
+  <div class="brand-filter-inner">
+    <button class="af on" onclick="filterAlpha('all',this)">Все</button>
+    <button class="af" onclick="filterAlpha('A',this)">A</button>
+    <button class="af" onclick="filterAlpha('B',this)">B</button>
+    <button class="af" onclick="filterAlpha('C',this)">C</button>
+    <button class="af" onclick="filterAlpha('D',this)">D</button>
+    <button class="af" onclick="filterAlpha('E',this)">E</button>
+    <button class="af" onclick="filterAlpha('I',this)">I</button>
+    <button class="af" onclick="filterAlpha('K',this)">K</button>
+    <button class="af" onclick="filterAlpha('L',this)">L</button>
+    <button class="af" onclick="filterAlpha('M',this)">M</button>
+    <button class="af" onclick="filterAlpha('R',this)">R</button>
+    <button class="af" onclick="filterAlpha('S',this)">S</button>
+    <button class="af" onclick="filterAlpha('T',this)">T</button>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<section class="section" style="padding-bottom:0">
+  <div class="wrap reveal">
+    <div class="sec-eyebrow">Топ бренды</div>
+    <div style="font-family:var(--f-serif);font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--c-text);line-height:1.2;letter-spacing:-.01em">Фавориты наших <em style="font-style:italic;color:var(--accent)">покупателей</em></div>
+    <div class="featured-grid">
+      <div class="brand-featured" style="min-height:340px" onclick="location.href='catalog.html'">
+        <div class="bf-bg" style="background-image:url('https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=900&q=80')"></div>
+        <div class="bf-overlay"></div>
+        <div class="bf-badge">№1 продаж</div>
+        <div class="bf-content">
+          <div class="bf-tag">✦ Премиум</div>
+          <div class="bf-name">Beauty of Joseon</div>
+          <div class="bf-desc">Традиционные корейские рецепты красоты в современной формуле. Женьшень, рисовая вода, ферменты.</div>
+          <a href="catalog.html" class="bf-btn">Смотреть товары <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <div class="brand-featured" style="min-height:340px" onclick="location.href='catalog.html'">
+        <div class="bf-bg" style="background-image:url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=900&q=80')"></div>
+        <div class="bf-overlay"></div>
+        <div class="bf-badge">Хит сезона</div>
+        <div class="bf-content">
+          <div class="bf-tag">✦ Культовый бренд</div>
+          <div class="bf-name">COSRX</div>
+          <div class="bf-desc">Минималистичная формула, максимальная эффективность. Муцин улитки, BHA, AHA, PHA кислоты.</div>
+          <a href="catalog.html" class="bf-btn">Смотреть товары <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL BRANDS -->
+<section class="section">
+  <div class="wrap reveal">
+    <div class="sec-eyebrow">Все бренды</div>
+    <div style="font-family:var(--f-serif);font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--c-text);line-height:1.2;margin-bottom:0;letter-spacing:-.01em">Полный список <em style="font-style:italic;color:var(--accent)">партнёров</em></div>
+    <div class="brands-grid" id="brandsGrid">
+      <!-- injected by JS -->
+    </div>
+
+    <!-- BANNER -->
+    <div class="brand-banner reveal">
+      <div class="bb-orb bb-orb-1"></div>
+      <div class="bb-orb bb-orb-2"></div>
+      <div style="position:relative;z-index:1">
+        <div class="bb-eyebrow">Гарантия подлинности</div>
+        <div class="bb-title">Только <em>оригинальная</em><br>продукция</div>
+        <p class="bb-text">Мы работаем исключительно с официальными дистрибьюторами и производителями корейских брендов. Каждая партия сопровождается корейским штрих-кодом и сертификатами соответствия.</p>
+        <a href="contacts.html" class="bb-btn"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>Задать вопрос</a>
+      </div>
+      <div class="bb-stats" style="position:relative;z-index:1">
+        <div class="bb-stat"><span class="bb-stat-num">40+</span><span class="bb-stat-lbl">Официальных брендов</span></div>
+        <div class="bb-stat"><span class="bb-stat-num">500+</span><span class="bb-stat-lbl">Наименований товаров</span></div>
+        <div class="bb-stat"><span class="bb-stat-num">100%</span><span class="bb-stat-lbl">Оригинальная продукция</span></div>
+        <div class="bb-stat"><span class="bb-stat-num">2 нед.</span><span class="bb-stat-lbl">Периодичность поставок</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CART -->
+<div style="position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:1000;opacity:0;pointer-events:none;transition:opacity .35s ease" id="cartVeil" onclick="closeCart()"></div>
+<div style="position:fixed;top:0;right:-440px;width:min(440px,100vw);height:100svh;background:var(--c-white);z-index:1001;display:flex;flex-direction:column;transition:right .4s cubic-bezier(.4,0,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.12)" id="cartDrawer">
+  <div style="padding:22px 24px 18px;border-bottom:1px solid var(--c-cream);display:flex;align-items:center;justify-content:space-between">
+    <span style="font-family:var(--f-serif);font-size:1.2rem;font-weight:500">Корзина</span>
+    <button onclick="closeCart()" style="width:36px;height:36px;border-radius:50%;border:none;background:var(--c-cream);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--t-fast)" onmouseenter="this.style.transform='rotate(90deg)'" onmouseleave="this.style.transform=''"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--c-light)">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="var(--c-rose)" stroke-width="1.4"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <p style="font-size:.88rem">Корзина пуста. <a href="catalog.html" style="color:var(--accent)">В каталог →</a></p>
+  </div>
+</div>
+
+<div style="position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--c-text);color:#fff;padding:12px 22px;border-radius:var(--r-pill);font-size:.82rem;font-weight:500;z-index:3000;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;white-space:nowrap" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div><div class="ft-logo">KO<em>RE</em>VA</div><p class="ft-desc">Оригинальная корейская косметика. Прямые поставки. Казахстан.</p><div class="ft-contact"><a href="tel:+77001234567"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+7 700 123-45-67</a><a href="mailto:hello@koreva.kz"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>hello@koreva.kz</a></div></div>
+      <div class="ft-col"><h4>Магазин</h4><ul><li><a href="catalog.html">Каталог</a></li><li><a href="brands.html">Бренды</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+      <div class="ft-col"><h4>Информация</h4><ul><li><a href="delivery.html">Доставка</a></li><li><a href="delivery.html#return">Возврат</a></li><li><a href="#">О нас</a></li></ul></div>
+      <div class="ft-col"><h4>Уход</h4><ul><li><a href="catalog.html">Сыворотки</a></li><li><a href="catalog.html">Кремы</a></li><li><a href="catalog.html">SPF</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><div class="ft-copy">© 2024 KOREVA. Все права защищены.</div><div class="ft-socials"><button class="ft-sc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></button><button class="ft-sc"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></button></div></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',scrollY>40),{passive:true});
+let menuOpen=false;
+function toggleMenu(){menuOpen=!menuOpen;document.getElementById('mobMenu').classList.toggle('open',menuOpen);document.body.style.overflow=menuOpen?'hidden':'';const s=document.getElementById('burger').querySelectorAll('span');if(menuOpen){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else s.forEach(x=>{x.style.transform='';x.style.opacity='';})}
+function openSearch(){document.getElementById('srchOverlay').classList.add('open');document.getElementById('srchInput').focus();}
+function closeSearch(){document.getElementById('srchOverlay').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch();});
+function openCart(){document.getElementById('cartVeil').style.cssText='opacity:1;pointer-events:all';document.getElementById('cartDrawer').style.right='0';document.body.style.overflow='hidden';}
+function closeCart(){document.getElementById('cartVeil').style.cssText='opacity:0;pointer-events:none';document.getElementById('cartDrawer').style.right='-440px';document.body.style.overflow='';}
+
+const BRANDS=[
+  {name:'Anua',origin:'Корея',letter:'A',desc:'Натуральные ингредиенты для чувствительной кожи. Хауттюйния, центелла, ниацинамид.',count:12,img:'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=100&q=60'},
+  {name:'Beauty of Joseon',origin:'Корея',letter:'B',desc:'Традиционные корейские рецепты красоты с современной биотехнологией.',count:18,img:'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=100&q=60'},
+  {name:'COSRX',origin:'Корея',letter:'C',desc:'Культовый бренд с минималистичными формулами и максимальной эффективностью.',count:24,img:'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=100&q=60'},
+  {name:'Dear Klairs',origin:'Корея',letter:'D',desc:'Мягкий уход без раздражителей. Идеален для чувствительной и реактивной кожи.',count:9,img:'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=100&q=60'},
+  {name:'Etude',origin:'Корея',letter:'E',desc:'Яркий и игривый K-beauty бренд с эффективными формулами ухода.',count:14,img:'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=100&q=60'},
+  {name:'IUNIK',origin:'Корея',letter:'I',desc:'Чистый и эффективный уход с концентрированными натуральными экстрактами.',count:8,img:'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=100&q=60'},
+  {name:'Krave Beauty',origin:'Корея',letter:'K',desc:'Минимализм в уходе. Меньше продуктов — лучше результат.',count:7,img:'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=100&q=60'},
+  {name:'Laneige',origin:'Корея',letter:'L',desc:'Водная технология увлажнения. Культовые маски и бальзамы для губ.',count:21,img:'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=100&q=60'},
+  {name:'Mixsoon',origin:'Корея',letter:'M',desc:'Монокомпонентные сыворотки с высокой концентрацией активных ингредиентов.',count:6,img:'https://images.unsplash.com/photo-1599305090598-fe179d501227?w=100&q=60'},
+  {name:'Round Lab',origin:'Корея',letter:'R',desc:'Берёзовый сок и морская вода как основа мягкого, эффективного ухода.',count:11,img:'https://images.unsplash.com/photo-1601134467661-3d775b999c8b?w=100&q=60'},
+  {name:'SKIN1004',origin:'Корея',letter:'S',desc:'Центелла азиатская с Мадагаскара. Максимальная концентрация, минимум лишнего.',count:15,img:'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=100&q=60'},
+  {name:'Some By Mi',origin:'Корея',letter:'S',desc:'Кислоты и осветляющие ингредиенты. 30 дней — реальный результат.',count:13,img:'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=100&q=60'},
+  {name:'Torriden',origin:'Корея',letter:'T',desc:'Гиалуроновая кислота разного молекулярного веса для глубокого увлажнения.',count:10,img:'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=100&q=60'},
+  {name:'TirTir',origin:'Корея',letter:'T',desc:'Основатели вирусного медового крема. Легендарные тональные средства.',count:8,img:'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=100&q=60'},
+];
+let currentAlpha='all';
+function renderBrands(){
+  const list=currentAlpha==='all'?BRANDS:BRANDS.filter(b=>b.letter===currentAlpha);
+  document.getElementById('brandsGrid').innerHTML=list.map(b=>`
+    <div class="brand-card" onclick="location.href='catalog.html'">
+      <div class="bc-logo"><img src="${b.img}" alt="${b.name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=bc-logo-text>${b.name[0]}</span>'"></div>
+      <div class="bc-name">${b.name}</div>
+      <div class="bc-origin">${b.origin}</div>
+      <div class="bc-desc">${b.desc}</div>
+      <span class="bc-count">${b.count} товаров</span>
+    </div>`).join('');
+}
+function filterAlpha(a,btn){currentAlpha=a;document.querySelectorAll('.af').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderBrands();}
+renderBrands();
+
+// Reveal
+new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');}),{threshold:.06}).observe&&document.querySelectorAll('.reveal').forEach(r=>new IntersectionObserver(([e])=>{if(e.isIntersecting){e.target.classList.add('vis');}},{threshold:.06}).observe(r));
+
+let toastT;function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.style.cssText='opacity:1;transform:translateX(-50%) translateY(0)';clearTimeout(toastT);toastT=setTimeout(()=>{t.style.cssText='opacity:0;transform:translateX(-50%) translateY(10px)';},2400);}
+</script>
+</body>
+</html>
